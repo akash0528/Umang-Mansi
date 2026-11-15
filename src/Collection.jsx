@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import Image1 from "./assets/image12.jpeg";
+import Image1 from "./assets/image1.jpeg";
 import Image2 from "./assets/image7.jpeg";
 import Image3 from "./assets/image14.jpeg";
-import Image4 from "./assets/image1.jpeg";
+import Image4 from "./assets/image12.jpeg";
 import Image5 from "./assets/image6.jpeg";
 import Image6 from "./assets/image3.jpeg";
 import Image7 from "./assets/image13.jpeg";
@@ -16,21 +16,21 @@ import Image14 from "./assets/image8.jpeg";
 import Image15 from "./assets/image2.jpeg";
 
 const galleryData = [
-  { id: 1, image: Image1, caption: "Embraced by Nature — A Gentle Smile" },
-  { id: 2, image: Image2, caption: "Timeless Elegance — A Royal Romance" },
-  { id: 3, image: Image3, caption: "Joyful Steps — Walking into Forever" },
-  { id: 4, image: Image4, caption: "Your caption here" },
-  { id: 5, image: Image5, caption: "Your caption here" },
-  { id: 6, image: Image6, caption: "Your caption here" },
-  { id: 7, image: Image7, caption: "Your caption here" },
-  { id: 8, image: Image8, caption: "Your caption here" },
-  { id: 9, image: Image9, caption: "Your caption here" },
-  { id: 10, image: Image10, caption: "Your caption here" },
-  { id: 11, image: Image11, caption: "Your caption here" },
-  { id: 12, image: Image12, caption: "Your caption here" },
-  { id: 13, image: Image13, caption: "Your caption here" },
-  { id: 14, image: Image14, caption: "Your caption here" },
-  { id: 15, image: Image15, caption: "Your caption here" },
+  { id: 1, image: Image1 },
+  { id: 2, image: Image2 },
+  { id: 3, image: Image3 },
+  { id: 4, image: Image4 },
+  { id: 5, image: Image5 },
+  { id: 6, image: Image6 },
+  { id: 7, image: Image7 },
+  { id: 8, image: Image8 },
+  { id: 9, image: Image9 },
+  { id: 10, image: Image10 },
+  { id: 11, image: Image11 },
+  { id: 12, image: Image12 },
+  { id: 13, image: Image13 },
+  { id: 14, image: Image14 },
+  { id: 15, image: Image15 },
 ];
 
 // ---- Mobile / responsive slider (image 2 wala, pehle jaisa) ----
