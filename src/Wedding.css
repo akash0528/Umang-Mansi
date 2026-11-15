@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wedding-container {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wedding-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* =========================================
+   CONTENT (MAROON TEXT)
+========================================= */
+
+.wedding-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 100svh;
+  text-align: center;
+  color: #720e1e;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+/* =========================================
+   GANESH
+========================================= */
+
+.ganesh-image {
+  position: absolute;
+  top: 5.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(72px, 16vw, 95px);
+  height: auto;
+  z-index: 5;
+}
+
+.ganesh-text {
+  position: absolute;
+  top: 22.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  font-size: clamp(11px, 2.5vw, 15px);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #720e1e;
+  white-space: nowrap;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.family-text {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  font-size: clamp(14px, 3.4vw, 20px);
+  font-weight: 600;
+  line-height: 1.4;
+  color: #720e1e;
+}
+
+/* =========================================
+   PERSON
+========================================= */
+
+.person {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.person-one {
+  top: 35%;
+}
+
+.person-two {
+  top: 68%;
+}
+
+/* =========================================
+   NAMES
+========================================= */
+
+.couple-name {
+  font-family: "Great Vibes", "Brush Script MT", cursive;
+  font-size: clamp(48px, 11vw, 72px);
+  font-weight: 400;
+  line-height: 1.05;
+  white-space: nowrap;
+  color: #800020;
+}
+
+/* =========================================
+   PARENTS
+========================================= */
+
+.parent-label {
+  margin-top: 6px;
+  font-size: clamp(13px, 3vw, 17px);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #720e1e;
+}
+
+.parents {
+  margin-top: 4px;
+  font-size: clamp(13px, 3vw, 17px);
+  font-weight: 600;
+  line-height: 1.4;
+  color: #720e1e;
+}
+
+/* =========================================
+   WITH
+========================================= */
+
+.and-text {
+  position: absolute;
+  top: 61.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Great Vibes", "Brush Script MT", cursive;
+  font-size: clamp(28px, 6.5vw, 42px);
+  color: #800020;
+  line-height: 1;
+}
+
+/* =========================================
+   RISE-UP ANIMATION
+========================================= */
+
+@keyframes riseUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 35px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.ganesh-image,
+.ganesh-text,
+.family-text,
+.person-one,
+.and-text,
+.person-two {
+  animation: riseUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ganesh-image { animation-delay: 0.4s; }
+.ganesh-text  { animation-delay: 0.7s; }
+.family-text  { animation-delay: 1.0s; }
+.person-one   { animation-delay: 1.4s; }
+.and-text     { animation-delay: 1.8s; }
+.person-two   { animation-delay: 2.1s; }
+
+
+/* =========================================
+   DESKTOP / LAPTOP VIEW  (FULL WIDTH)
+   - mobile wale absolute % positions hata kar normal flow layout
+   - sab kuch center me, fixed px sizes (original site jaisa)
+   - ye block file ke END me hi rehna chahiye
+   - size badalna ho to neeche --name-size / --text-size badlo
+========================================= */
+
+@media (min-width: 768px) {
+  .wedding-container {
+    --name-size: clamp(110px, 9.5vw, 180px);
+    --text-size: clamp(16px, 1.15vw, 22px);
+    max-width: none;
+    width: 100%;
+    min-height: 100svh;
+    box-shadow: none;
+  }
+
+  /* background poori width me cover */
+  .wedding-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .wedding-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100svh;
+    padding: 100px 24px 90px;
+  }
+
+  /* sab elements ko absolute se normal flow me laao */
+  .ganesh-image,
+  .ganesh-text,
+  .family-text,
+  .person,
+  .person-one,
+  .person-two,
+  .and-text {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+
+  .ganesh-image {
+    width: 100px;
+    display: block;
+  }
+
+  .ganesh-text {
+    width: auto;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .family-text {
+    width: auto;
+    max-width: 760px;
+    margin-top: 10px;
+    font-size: var(--text-size);
+    line-height: 1.7;
+  }
+
+  .person {
+    width: auto;
+    margin-top: 6px;
+  }
+
+  .couple-name {
+    font-size: var(--name-size);
+    line-height: 1.1;
+  }
+
+  .parent-label,
+  .parents {
+    font-size: var(--text-size);
+    line-height: 1.75;
+    margin-top: 0;
+  }
+
+  .parent-label {
+    margin-top: 28px;
+  }
+
+  .and-text {
+    margin-top: 18px;
+    font-size: clamp(38px, 3.2vw, 58px);
+  }
+
+  .person-two {
+    margin-top: 0;
+  }
+
+  /* flow layout ke liye animation (translate(-50%) ke bina) */
+  @keyframes riseUpFlow {
+    from { opacity: 0; transform: translateY(35px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .ganesh-image,
+  .ganesh-text,
+  .family-text,
+  .person-one,
+  .and-text,
+  .person-two {
+    animation-name: riseUpFlow;
+  }
+}
