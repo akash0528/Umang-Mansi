@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
-import Image1 from "./assets/image1.jpeg";
-import Image2 from "./assets/image7.jpeg";
-import Image3 from "./assets/image14.jpeg";
-import Image4 from "./assets/image12git pull.jpeg";
-import Image5 from "./assets/image6.jpeg";
-import Image6 from "./assets/image3.jpeg";
-import Image7 from "./assets/image13.jpeg";
-import Image8 from "./assets/image17.jpeg";
-import Image9 from "./assets/image5.jpeg";
-import Image10 from "./assets/image4.jpeg";
-import Image11 from "./assets/image15.jpeg";
-import Image12 from "./assets/image9.jpeg";
-import Image13 from "./assets/image16.jpeg";
-import Image14 from "./assets/image8.jpeg";
-import Image15 from "./assets/image2.jpeg";
+import Image1 from "./assets/Image1.jpeg";
+import Image2 from "./assets/Image7.jpeg";
+import Image3 from "./assets/Image14.jpeg";
+import Image4 from "./assets/Image12.jpeg";
+import Image5 from "./assets/Image6.jpeg";
+import Image6 from "./assets/Image3.jpeg";
+import Image7 from "./assets/Image13.jpeg";
+import Image8 from "./assets/Image17.jpeg";
+import Image9 from "./assets/Image5.jpeg";
+import Image10 from "./assets/Image4.jpeg";
+import Image11 from "./assets/Image15.jpeg";
+import Image12 from "./assets/Image9.jpeg";
+import Image13 from "./assets/Image16.jpeg";
+import Image14 from "./assets/Image8.jpeg";
+import Image15 from "./assets/Image2.jpeg";
 
 const galleryData = [
   { id: 1, image: Image1 },
